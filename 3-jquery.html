@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <style>
+        main {
+            margin-top: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <main>
+        <div>
+            <label for="number1">N1</label> <input id="number1" value="0" type="number"> +
+            <label for="number2">N1</label> <input id="number2" value="0" type="number">
+            <button id="calc">=</button>
+            <label for="total">Total</label>  <input id="total" type="number">
+        </div>
+    </main>
+</div>
+<!-- without jQuery -->
+<!--<script>-->
+  <!--console.log('native number1 = ' + document.getElementById('number1').value)-->
+
+  <!--document.getElementById('calc').addEventListener("click", event => {-->
+    <!--console.log('native calc btn clicked')-->
+    <!--document.getElementById('total').value = parseInt(document.getElementById('number1').value) + parseInt(document.getElementById('number2').value);-->
+  <!--});-->
+<!--</script>-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<!-- with jQuery -->
+<!--<script>-->
+  <!--$(document).ready(function () {-->
+    <!--console.log('jquery number1 = ' + $('.number1').val());-->
+
+    <!--$('#calc').click(event => {-->
+      <!--console.log('jquery calc btn clicked')-->
+    <!--});-->
+  <!--});-->
+<!--</script>-->
+<!-- jQuery document ready -->
+<!--<script>-->
+  <!--$(document).ready(function () {-->
+    <!--console.log("ready!");-->
+
+  <!--});-->
+  <!--console.log("not ready!");-->
+<!--</script>-->
+</body>
+</html>

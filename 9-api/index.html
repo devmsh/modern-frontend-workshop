@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webpack</title>
+    <link type="text/css" rel="stylesheet" href="public/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="app" class="container">
+    <main>
+        <ul class="tasks">
+            <li v-for="task in tasks" class="task"><input v-model="task.finished" type="checkbox"/>{{task.name}}
+            </li>
+        </ul>
+        <input type="submit"> <input @click.prevent="submit" value="ajax" type="submit">
+    </main>
+</div>
+<script src="public/index.js"></script>
+</body>
+</html><!--node_modules\.bin\webpack assets\index.js public\index.js-->

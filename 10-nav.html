@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Vue List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html,
+        body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        header, footer {
+            background-color: #aaeaf1;
+        }
+
+        main {
+            background-color: #b2aaf1;
+            flex-grow: 1;
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li>Test 1</li>
+            <li>Test 2</li>
+            <li>Test 3</li>
+            <li>Test 4</li>
+        </ul>
+    </nav>
+</header>
+<main>
+    Main Content
+</main>
+<footer>
+    <div>Footer Content</div>
+</footer>
+</body>
+</html>

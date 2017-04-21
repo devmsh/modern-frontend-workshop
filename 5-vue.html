@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue2</title>
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap@next/dist/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="app" class="container">
+    <b-card header="Calc">
+        <form>
+            <b-alert :show="true" dismissible variant="success">
+                <strong>Success!</strong> Indicates a successful or positive action.
+            </b-alert>
+            <b-form-fieldset label="N1">
+                <b-form-input v-model.number="number1" type="number"></b-form-input>
+            </b-form-fieldset>
+            <b-form-fieldset label="N2">
+                <b-form-input v-model.number="number2" type="number"></b-form-input>
+            </b-form-fieldset>
+            <b-button size="sm" variant="primary" href="">=</b-button>
+            <b-form-fieldset label="Total">
+                <b-form-input v-model="total" type="number"></b-form-input>
+            </b-form-fieldset>
+        </form>
+    </b-card>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
+<script src="https://unpkg.com/tether@latest/dist/js/tether.min.js"></script>
+<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+
+<script>
+  let app = new Vue({
+    el: '#app',
+    data: {
+      number1: 0,
+      number2: 0,
+    },
+    computed: {
+      total() {
+        return this.number1 + this.number2;
+      },
+    },
+  });
+</script>
+</body>
+</html>

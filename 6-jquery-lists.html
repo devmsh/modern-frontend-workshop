@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery List</title>
+    <style>
+        main {
+            margin-top: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <main>
+        <form method="post">
+            <ul class="tasks">
+                <li class="task"><input name="task[1]" type="checkbox"/>Task1</li>
+                <li class="task"><input name="task[2]" type="checkbox"/>Task2</li>
+                <li class="task"><input name="task[3]" type="checkbox"/>Task3</li>
+                <li class="task"><input name="task[4]" type="checkbox"/>Task4</li>
+                <li class="task"><input name="task[5]" type="checkbox"/>Task5</li>
+                <li class="task"><input name="task[6]" type="checkbox"/>Task6</li>
+                <li class="task"><input name="task[7]" type="checkbox"/>Task7</li>
+                <li class="task"><input name="task[8]" type="checkbox"/>Task8</li>
+                <li class="task"><input name="task[9]" type="checkbox"/>Task9</li>
+                <li class="task"><input name="task[10]" type="checkbox"/>Task10</li>
+            </ul>
+            <input type="submit">
+            <input id="ajax" value="ajax" type="submit">
+        </form>
+    </main>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function () {
+        $('#ajax').click(event => {
+          event.preventDefault();
+          let data = $('form').serialize();
+          console.log(data);
+          // use $.ajax('') to send the data
+        });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webpack</title>
+    <link type="text/css" rel="stylesheet" href="public/styles.css"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="app" class="container">
+    <b-card header="Calc">
+        <form>
+            <b-alert :show="true" dismissible variant="success">
+                <strong>Success!</strong> Indicates a successful or positive action.
+            </b-alert>
+            <b-form-fieldset label="N1">
+                <b-form-input v-model.number="number1" type="number"></b-form-input>
+            </b-form-fieldset>
+            <b-form-fieldset label="N2">
+                <b-form-input v-model.number="number2" type="number"></b-form-input>
+            </b-form-fieldset>
+            <b-button size="sm" variant="primary" href="">=</b-button>
+            <b-form-fieldset label="Total">
+                <b-form-input v-model="total" type="number"></b-form-input>
+            </b-form-fieldset>
+            <b-form-fieldset :feedback="feedback" description="We'll convert your name to lowercase automatically." label="Example Label" :state="state" :label-size="1">
+                <b-form-input v-model="name"></b-form-input>
+            </b-form-fieldset>
+        </form>
+    </b-card>
+</div>
+<script src="public/index.js"></script>
+</body>
+</html>
+
+<!--node_modules\.bin\webpack assets\index.js public\index.js-->

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue List</title>
+    <style>
+        main {
+            margin-top: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="app" class="container">
+    <main>
+        <form method="post">
+            <ul class="tasks">
+                <li v-for="task in tasks" class="task">
+                    <input v-model="task.finished" type="checkbox"/>{{task.name}}
+                </li>
+            </ul>
+            <input type="submit"> <input @click.prevent="submit" value="ajax" type="submit">
+            <input @click.prevent="add" value="add" type="submit">
+        </form>
+    </main>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+  let app = new Vue({
+    el: '#app',
+    data: {
+      tasks: [
+        {name: "Task1", finished: false},
+        {name: "Task2", finished: false},
+        {name: "Task3", finished: false},
+        {name: "Task4", finished: false},
+        {name: "Task5", finished: false},
+        {name: "Task6", finished: false},
+        {name: "Task7", finished: false},
+        {name: "Task8", finished: false},
+        {name: "Task9", finished: false},
+        {name: "Task10", finished: false},
+      ]
+    },
+    methods:{
+      submit: function () {
+        let data = JSON.stringify(this.tasks);
+        console.log(data);
+        // use axios to send the data
+        // promis!
+      },
+      add: function(){
+        this.tasks.push({name: "New task", finished: false});
+      }
+    }
+  });
+</script>
+</body>
+</html>

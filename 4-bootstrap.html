@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">Calc</div>
+        <div class="panel-body">
+            <form>
+                <div class="alert alert-success hide">
+                    <strong>Success!</strong> Indicates a successful or positive action.
+                </div>
+                <div class="form-group">
+                    <label for="number1">N1</label> <input class="form-control" id="number1" value="0" type="number">
+                </div>
+                <div class="form-group">
+                    <label for="number2">N1</label> <input class="form-control" id="number2" value="0" type="number">
+                </div>
+                <button id="calc" class="btn btn-default">=</button>
+                <div class="form-group">
+                    <label for="total">Total</label> <input class="form-control" id="total" type="number">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function () {
+    $('#calc').click(event => {
+      event.preventDefault();
+      console.log('jquery calc btn clicked')
+      $('.alert-success').toggleClass('hide');
+    });
+  });
+</script>
+</body>
+</html>
